@@ -1,0 +1,15 @@
+/** BasicInputOutput.java
+ * @author Joseph Feldmeyer
+ *
+ */
+public class BasicInputOutput {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
