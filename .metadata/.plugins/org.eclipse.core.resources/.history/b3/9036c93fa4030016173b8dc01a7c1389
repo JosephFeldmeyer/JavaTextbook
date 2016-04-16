@@ -1,0 +1,17 @@
+/** MultiplicationTable.java
+ * Program to display a multiplication table where the user inputs the 
+ * number of the table to display. 
+ * @author Joseph Feldmeyer
+ *
+ */
+public class MultiplicationTable {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

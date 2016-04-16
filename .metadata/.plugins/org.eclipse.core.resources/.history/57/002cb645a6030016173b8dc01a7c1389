@@ -1,0 +1,40 @@
+/** MultiplicationTable.java
+ * Program to display a multiplication table where the user inputs the 
+ * number of the table to display. 
+ * @author Joseph Feldmeyer
+ *
+ */
+
+import java.util.Scanner;
+
+public class MultiplicationTable {
+
+	private void displayMultiplicationTable (final int n) {
+		int counter = 1; 
+		System.out.println ("The " + n + " times table");
+		while (counter < 13) {//Display from 2 to 12
+			Systm.out.print(counter + " x " + n); 
+			System.out.println(" = " + counter * n);
+			counter = counter + 1;
+		}
+	}
+	
+	private int getTablenumber() {
+		try(Scanner in = new Scanner(System.in)) {
+			System.out.print("Which table (2-12)? ");
+			return in.nextInt();
+		}
+	}
+
+	private void doTable() {
+		int x = getTablenumber();
+		if((x < 2) || (x > 12)) { System.out.println("Cannot Display that table.");}
+		else { displayMultiplicationTable(x);}
+	}
+
+	public static void main(String[] args) {
+		final MultiplicationTable object = new MultiplicationTable();
+		object.doTable();
+	}
+
+}

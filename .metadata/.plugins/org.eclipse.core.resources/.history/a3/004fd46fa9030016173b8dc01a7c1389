@@ -1,0 +1,16 @@
+/** CharacterTriangle.java
+* Program to display a triangle using single character output. 
+*/
+
+public class CharacterTriangle {
+	private void displayTriange(final int height) {
+		for ( int row=0; row < height; ++row ) {
+			for ( int column=0; cloumn < row + 1; ++column ) { System.out.print("*"); }
+				System.out.println();
+		}
+	}
+	public static void main (final String[] args) {
+		final CharacterTriangle object = new CharacterTriangle();
+		object.displayTriange(6);
+	}
+}

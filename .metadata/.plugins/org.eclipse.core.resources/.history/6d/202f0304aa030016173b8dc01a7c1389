@@ -1,0 +1,23 @@
+/** CharacterRectangle.java
+* Program to display a rectangle using single character output. 
+*/
+public class CharacterRectangle {
+	private void displayRectangle( final int height, final int width) {
+		for (int row = 0; row < height; ++row ) {
+			if ((row==0) || (row==3)) {
+				for (int column = 0; column < width; ++column) { System.out.print('*'); }
+			}
+			else {
+				System.out.print('*');
+				for ( int column=0; column < (width-2); ++column ) { System.out.print(' '); }
+				System.out.print("*");
+			}
+			
+			System.out.println();
+		}
+	}
+	public static void main (final String[] args) {
+		final CharacterRectangle object = new CharacterRectangle();
+		object.displayRectangle(4, 8) ;
+	}
+}
