@@ -105,8 +105,8 @@ public class Ch2Exercises {
 	//2.10
 	private void TriangleCalculationUntilStop() {
 		try(Scanner scan = new Scanner(System.in)){
-			String str = "";
-			while(str.compareTo("stop") != 0) {
+			String s = "";
+			while(scan.nextLine().compareTo("stop") != 0) {
 				System.out.print("Enter length of first side: ");
 				final double a = scan.nextDouble();
 				System.out.print("Enter length of second side: ");
@@ -127,9 +127,6 @@ public class Ch2Exercises {
 				else {
 					System.out.println("The input values do not describe a triangle."); 
 				}
-				System.out.print("Do you want to stop? ");
-				scan.nextLine();
-				str = scan.nextLine();
 			}
 		}
 	}

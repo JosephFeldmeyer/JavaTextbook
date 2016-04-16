@@ -82,7 +82,7 @@ public class Ch2Exercises {
 		try (Scanner scan = new Scanner(System.in)) {
 			System.out.println("How many numbers to input? ");
 			int counterLimit = scan.nextInt();
-			int counter = 1;
+			counter = 1;
 			int sum = 0;
 			while (counter <= counterLimit) {
 				System.out.print("Type in an integer: ");
@@ -91,47 +91,6 @@ public class Ch2Exercises {
 			}
 			System.out.print("The sum is: " + sum);
 		}		
-	}
-
-	//2.9 
-	private void StringCompare(){
-		System.out.println("PROGRAM".compareTo("ProGram"));
-		System.out.println("ProGram".compareTo("proGram"));
-		System.out.println("proGram".compareTo("program"));
-		System.out.println("program".compareTo("program3"));
-		System.out.println("program3".compareTo("programs"));
-	}
-
-	//2.10
-	private void TriangleCalculationUntilStop() {
-		try(Scanner scan = new Scanner(System.in)){
-			String str = "";
-			while(str.compareTo("stop") != 0) {
-				System.out.print("Enter length of first side: ");
-				final double a = scan.nextDouble();
-				System.out.print("Enter length of second side: ");
-				final double b = scan.nextDouble();
-				System.out.print("Enter length of third side: ");
-				final double c = scan.nextDouble();
-				// Test to ensure that the input describes a valid triangle
-				// by checking the triangle inequality holds before attempting
-				// calculations. 
-				if( ((a+b)>c) && ((b+c)>a) && ((a+c)>b) ) {
-					final double perimeter = a+b+c;
-					final double s = 0.5 * perimeter; 
-					final double t = s * (s-a) * (s-b) * (s-c); 
-					final double area = Math.sqrt(t);
-					System.out.println("Perimeter is: " + perimeter); 
-					System.out.println("Area is: " + area);
-				}
-				else {
-					System.out.println("The input values do not describe a triangle."); 
-				}
-				System.out.print("Do you want to stop? ");
-				scan.nextLine();
-				str = scan.nextLine();
-			}
-		}
 	}
 
 	public static void main(final String[] args) {
@@ -162,13 +121,7 @@ public class Ch2Exercises {
 		//object2.AddTenIntegers();
 
 		//2.8
-		//object2.AddIntegers();
-
-		//2.9
-		object2.StringCompare();
-
-		//2.10
-		object2.TriangleCalculationUntilStop();
+		object2.AddIntegers();
 
 	}
 }

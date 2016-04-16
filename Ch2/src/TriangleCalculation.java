@@ -30,7 +30,7 @@
 		else {
 			System.out.println("The input values do not describe a triangle."); 
 		}
-		scan.close();
+		
 	}
 	public static void main(final String[] args) {
 		TriangleCalculation object = new TriangleCalculation();

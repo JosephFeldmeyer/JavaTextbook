@@ -127,8 +127,6 @@ public class Ch2Exercises {
 				else {
 					System.out.println("The input values do not describe a triangle."); 
 				}
-				System.out.print("Do you want to stop? ");
-				scan.nextLine();
 				str = scan.nextLine();
 			}
 		}
