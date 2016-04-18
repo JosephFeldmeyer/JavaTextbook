@@ -3,6 +3,7 @@
  * to an <code>int</code> to be output in decimal.
  * @author Joseph Feldmeyer
  */
+import java.util.Scanner;
 public class ConvertBinaryToDecimal {
 	private String getBinaryNumberString(){
 		try(Scanner in = new Scanner(System.in)) {

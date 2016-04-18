@@ -1,0 +1,27 @@
+package exercises;
+/** CharacterNumber.java
+ * Counts the number of times a specified character appears in a
+ * line of text. 
+ * @author Joseph Feldmeyer
+ *
+ */
+import java.util.Scanner;
+public class CharacterNumber {
+	private void doCounting(final String line, final char character) {
+		int sum = 0;
+		for(int position = 0; position < line.length(); ++position) {
+			if(line.charAt(position) == character) { sum += 1; }
+		}
+		System.out.println("The number of times the letter " + character + "appeared in the text is: " + sum)
+	}
+	public static void main(final String[] args) {
+		CharacterNumber object = new CharacterNumber();
+		try(Scanner scan = new Scanner(System.in)) {
+			System.out.print("Type in a line of text: ");
+			final String line = scan.nextLine();
+			System.out.print("Type in a letter: ");
+			final String character = scan.next().charAt(0);
+		}
+		object.doCounting(line, character);
+	}
+}

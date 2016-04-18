@@ -1,0 +1,8 @@
+/** ConvertDistance.java
+ * Convert from feet to cm or yards to meters or miles to km
+ * @author Joseph Feldmeyer
+ *
+ */
+public class ConvertDistance {
+
+}

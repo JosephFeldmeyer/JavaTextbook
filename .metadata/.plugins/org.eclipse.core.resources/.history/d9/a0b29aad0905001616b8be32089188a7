@@ -1,0 +1,31 @@
+/** ConvertDistance.java
+ * Convert from feet to cm or yards to meters or miles to km
+ * @author Joseph Feldmeyer
+ */
+import java.util.Scanner;
+public class ConvertDistance {
+	private void doConversion(final String convertMethod, final int convertDistance) {
+		switch(convertMethod){
+			case 'feet':
+				final int result = convertDistance*30.48;
+				System.out.println(convertDistance + " feet is " + result + " centimeters.");
+			case 'yards':
+				final int result = convertDistance*0.9144;
+				System.out.println(convertDistance + " yards is " + result + " meters.");
+			case 'miles':
+				final int result = convertDistance*1.60934;
+				System.out.println(convertDistance + " miles is " + result + " kilometers.");
+		}
+	}
+	public static void main (final String[] args) {
+		try(Scanner scan = new Scanner(System.in)) {
+			ConvertDistance object = new ConvertDistance();
+			System.out.print("Type 'feet' to convert from feet to centimeters, 'yards' to convert from yards to meters, and 'miles' to convert from miles to kilometers.");
+			final String convertMethod = scan.nextLine();
+			System.out.print("How many " + convertMethod + "?");
+			final int convertDistance = scan.nextInt();
+			object.doConversion(convertMethod, convertDistance);
+		}
+		
+	}
+}
